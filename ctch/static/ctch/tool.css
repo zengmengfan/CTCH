@@ -1,0 +1,145 @@
+textarea{
+	
+	width: 500px;
+	height: 150px;
+	display: block;
+	text-align: left;
+
+}
+
+#model,#strength{
+    display: block;
+    padding:5px 0px;
+    width:500px;
+    
+}
+
+#problem,#file,#common{
+	margin: 20px auto;
+	width: 500px;
+}
+
+span{
+	color: red;
+}
+
+h2{
+	float: left;
+	font-weight: bold;
+	text-align: left;
+	margin: 20px 0px;
+}
+.prompt{
+	clear: both;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: small;
+}
+
+#comment{
+	float: left;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: small;
+	line-height: 30px;
+	margin: 20px 0px;
+	height: 30px;
+	/*border: 1px solid #000;*/
+
+}
+
+#submit{
+	float: right;
+	margin: 20px 0px;
+	display: block;
+	height: 30px;
+	width: 80px;
+	color: black;
+	outline: none;
+	border-radius: 8px;
+}
+
+.tab{
+	display: inline-block;
+	color: #9d9d9d;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 20px;
+	font-size: 16px;
+	border: 0px solid #000;
+	border-radius: 5px;
+}
+.tab:hover{
+	color: black; 
+	cursor:pointer;
+}
+.current{
+	display: inline-block;
+	color:white;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 20px;
+	font-size: 16px;
+	border: 0px solid #4f4f4f;
+	border-radius: 5px;
+	background:  #4f4f4f;
+}
+
+#tab_wrap{
+	float: right;
+	margin-top: 24px;
+	font-size: 0px;
+	width: 104px;
+/*	border: 1px solid #000;*/
+	border-collapse: collapse;
+	border-radius: 5px;
+}
+
+#file{
+	clear: both;
+	display: none;
+	width: 500px;
+	height: 300px;
+	
+}
+
+#ugly{
+	display: none;
+}
+
+#generate,#pretty{
+
+	height: 30px;
+	line-height: 30px;
+	width: 80px;
+	border-radius: 8px;
+	text-align: center;
+	outline: none;
+}
+
+#file_name{
+	
+	height: 30px;
+	width: 330px;
+	/*border: 1px solid #999;*/
+}
+
+label{
+	font-weight: lighter;
+	text-align: left;
+}
+#upload{
+	margin: 20px 0px;
+}
+
+#pretty{
+	clear: both;
+	margin: 20px auto;
+}
+
+
+

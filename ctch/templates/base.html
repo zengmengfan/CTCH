@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name ="keywords" content="combinatorial testing, constraint"/>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'ctch/base.css' %}" >
+	{% block head %}
+	<title>CTCH</title>
+	{% endblock %}
+</head>
+<body >
+	<div id="big_wrap">
+		<header id="header">
+		<div id="logo" ><a href="#">CTCH</a></div>
+		<nav id="nav">
+			<ul>
+				<li><a href="#">Intro</a></li>
+				<li><a href="#">Demo</a></li>
+				<li><a href="#">Tool</a></li>
+				<li><a href="w">Idea</a></li>
+				<li><a href="http://gist.nju.edu.cn">Home</a></li>
+			</ul>
+		</nav>	
+		</header>	
+		
+		{% block content %}
+			Hi, you didn't overwrite me!
+		{% endblock %}
+		<footer id="footer">
+			Copyright © 2017
+		</footer>
+	</div>
+</body>
+{% block script %}
+
+{% endblock %}
+</html>

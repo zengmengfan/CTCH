@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Tool</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'ctch/tool.css' %}" >
+{% endblock %}
+
+{% block content %}
+	<section id="common">
+		<h2 id="tool_name">Just Try CTCH</h2>
+		<ul id="tab_wrap">
+			<li id="tab1" class="current" > Trial </li>
+			<li id="tab2" class="tab">Pro</li>
+		</ul>
+	</section>
+
+	<section id="problem">
+		<p class="prompt">Specify the parameters, covering strenth and constraints then click "Generate" button to get a covering array.</p>
+		<form  id="content" action="{% url 'trial' %}" method="post">
+			{% csrf_token %}
+			<p><span>*</span>Parameters: </p>
+			<input type="text" id="model" name="model" placeholder="eg: 2,4;3,2; / 2 2 2 2 3 3" />
+			<p><span>*</span>Strength: </p>
+			<input type="text" id="strength" name="strength" placeholder="from 2-6" height="20px" width="40px"/>
+			<p>Constraints: </p>
+			<textarea  id="constraints" name="constraints" placeholder="eg:~{0.1,1.0}"></textarea>
+			<p id="comment"><span>*</span>indicates a required field </p>
+			<input type="submit" id="submit" value="Generate">
+		</form>
+	</section>
+
+	
+	<section id="file">
+		<p class="prompt">Write the parameters, covering strenth, constraints and seeds in a  file then upload that file. Click "Generate" button to get a covering array.</p>
+		<form id="upload" action="{% url 'pro' %}" enctype="multipart/form-data" method="post">
+			{% csrf_token %}
+			<input type="file" id="ugly" name="inputfile">
+			<label for="file_name">Input file: </label>
+			<input type="text" id="file_name" readonly="true"/>
+			<input type="button" id="pretty" value="Choose" class="button">
+			<input type="submit"  id="generate" value="Generate">
+		</form>
+		
+	</section>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'ctch/tool.js' %}"></script>
+{% endblock %}

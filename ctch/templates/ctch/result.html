@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Result</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'ctch/result.css' %}" >
+{% endblock %}
+
+{% block content %}
+	<div class="table_wrap">
+		<div class="table_name">Summary:</div>
+		<table id="input">
+			<thead>
+				<tr>
+					<td>Parameters</td>
+					<td>Constraints</td>
+					<td>Strength</td>
+					<td>Tuples</td>
+					<td>Size</td>
+					<td>Time</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{result.parameter}}</td>
+					<td>{{result.constraint}}</td>
+					<td>{{result.t}}</td>
+					<td>{{result.tuple}}</td>
+					<td>{{result.size}}</td>
+					<td>{{result.time}}ms</td>
+				</tr>
+			</tbody>	
+		</table>
+	</div>
+
+ 
+	<div class="table_wrap">
+		<div class="table_name"> 
+			<form id="download_ca" action="{% url 'download' %}" method="post">
+				{% csrf_token %}
+				The covering array: <a type="submit" id="download" onclick="document.getElementById('download_ca').submit();return false">Download</a>
+				<input type="hidden" name="filename" value="{{filename}}">
+
+			</form>
+		</div>
+		<table id="table">
+			<thead>
+				<tr>
+					{% for i in head %}
+						<td>
+							{{i}}
+						</td>
+					{% endfor%}
+				</tr>
+			</thead>
+			<tbody>
+				{% for row in content %}
+				<tr>
+					{% for value in row %}
+					<td>
+						{{value}}
+					</td>
+					{% endfor %}
+				</tr>
+				
+
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}

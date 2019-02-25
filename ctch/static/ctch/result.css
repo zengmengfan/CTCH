@@ -1,0 +1,93 @@
+#table tr {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: gray;
+}
+#table thead{
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	color: black;
+}
+
+thead tr td{
+	color:black; 
+}
+
+tbody tr td{
+	color:gray; 
+}
+#table {
+	margin: 10px auto;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: black;
+	border-collapse: collapse;
+}
+
+/* Padding and font style */
+#table td, #table th {
+	padding: 5px 10px;
+	font-size: 12px;
+	font-family: Verdana;
+}
+
+/* Alternating background colors */
+#table tr:nth-child(even) {
+	background: rgb(230, 238, 214);
+}
+#table tr:nth-child(odd) {
+	background: #FFF;
+}
+
+.table_wrap{
+	clear: both;
+	width: 900px;
+	margin: 20px auto;
+	overflow-x:auto;
+}
+
+#download{
+	outline: none;
+	text-decoration:none;
+	color: gray;
+}
+#download:hover{
+	cursor: pointer;
+	color:rgb(237, 156, 40);
+}
+
+#input{
+	margin: 10px auto;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: black;
+	border-collapse: collapse;
+	font-family: padding: 5px 10px;
+	font-size: 12px;
+	font-family: Verdana;
+
+}
+#input td{
+	padding: 5px 10px;
+	font-size: 12px;
+	
+}
+#input thead{
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: gray;
+	color: black;
+}
+.table_name{
+	margin: 10px auto;
+	color: black;
+}
